@@ -7,18 +7,25 @@
       background-color: #4CAF50;
       border: 1px;
       color: white;
-      /*padding: 0px;*/
       height: 40px;
       width: 80px;
       text-align: center;
       text-decoration: none;
       display: block;
-      /*position: absolute;*/
       font-size: 16px;
       margin-bottom: 10px;
       margin-right: 10px;
       cursor: pointer;
     }
+    .spacer {
+      background-color: black;
+      height: 40px;
+      width: 80px;
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+
 
     .layer {
       display: inline-block;
@@ -30,23 +37,41 @@
     <h1>Taylor Swift Bracket Generator</h1>
     <!-- Layer 1 -->
     <div class="layer">
-      <button class="rectangle" id="l0r0" onclick="clicked(this)">l0r0</button>
-      <button class="rectangle" id="l0r1" onclick="clicked(this)">l0r1</button>
-      <button class="rectangle" id="l0r2" onclick="clicked(this)">l0r2</button>
-      <button class="rectangle" id="l0r3" onclick="clicked(this)">l0r3</button>
+      <button class="rectangle" id="l0r0" onclick="clicked(this)">1</button>
+      <button class="rectangle" id="l0r1" onclick="clicked(this)">2</button>
+      <button class="rectangle" id="l0r2" onclick="clicked(this)">3</button>
+      <button class="rectangle" id="l0r3" onclick="clicked(this)">4</button>
+      <button class="rectangle" id="l0r4" onclick="clicked(this)">5</button>
+      <button class="rectangle" id="l0r5" onclick="clicked(this)">6</button>
+      <button class="rectangle" id="l0r6" onclick="clicked(this)">7</button>
+      <button class="rectangle" id="l0r7" onclick="clicked(this)">8</button>
     </div>
     <!-- Layer 2 -->
     <div class="layer">
+      <div class="spacer" style="margin-bottom: 10px"></div>
       <button class="rectangle" id="l1r0" onclick="clicked(this)"></button>
-      <button class="rectangle" id="l1r1" onclick="clicked(this)"></button> 
-    
+      <div class="spacer"></div>
+      <button class="rectangle" id="l1r1" onclick="clicked(this)"></button>
+      <div class="spacer"></div>
+      <button class="rectangle" id="l1r2" onclick="clicked(this)"></button>
+      <div class="spacer"></div>
+      <button class="rectangle" id="l1r3" onclick="clicked(this)"></button>  
+    </div>
+    <!-- Layer 3 -->
+    <div class="layer">
+      <button class="rectangle" id="l2r0" onclick="clicked(this)"></button>
+      <button class="rectangle" id="l2r1" onclick="clicked(this)"></button> 
+    </div>
+    <!-- Layer 4 -->
+    <div class="layer">
+      <button class="rectangle" id="l3r0" onclick="clicked(this)"></button>
     </div>
 
     <script>
       // Setup
       songs = ["song1", "song2", "song3"];
-      layer0Size = 4
-      width = 2
+      layer0Size = 8
+      width = layer0Size/2
 
       layers = []
       for (let i = 0; i < width; i++) {
@@ -74,7 +99,7 @@
         }
 
         // Make sure the next layer's rectangle and this rectangle's match are not blank
-        if (next.innerHTML == "") {
+        if (next.innerHTML == "" && element.innerHTML !== "") {
           console.log("here")
           next.innerHTML = element.innerHTML
         }
