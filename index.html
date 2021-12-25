@@ -34,11 +34,30 @@
       text-align: center;
       text-decoration: none;
       display: block;
-      /*font-size: 100%;*/
       font-size: 30px;
-      margin-bottom: 20px;
+      padding: 0px;
       margin-right: 40px;
       cursor: pointer;
+    }
+
+
+
+    .verticalLine {
+      display: inline-block;
+      border: solid #000;
+      border-width: 0px;
+      border-right-width: 3px;
+      width: 150px;
+      height: 20px;
+    }
+
+    .horizontalLine {
+      display: inline-block;
+      border: solid #000;
+      border-width: 0px;
+      border-top-width: 3px;
+      width: 200px;
+      height: 8px;
     }
 
     .spacer {
@@ -63,37 +82,36 @@
       <!-- Layer 1 -->
       <div class="layer">
         <button class="rectangle" id="l0r0" onclick="clicked(this)"></button>
+        <div class="verticalLine"></div><div class="horizontalLine"></div>
         <button class="rectangle" id="l0r1" onclick="clicked(this)"></button>
+        <div class="verticalLine" style="border-right-width:0px"></div>
         <button class="rectangle" id="l0r2" onclick="clicked(this)"></button>
+        <div class="verticalLine"></div><div class="horizontalLine"></div>
         <button class="rectangle" id="l0r3" onclick="clicked(this)"></button>
+        <div class="verticalLine" style="border-right-width:0px"></div>
         <button class="rectangle" id="l0r4" onclick="clicked(this)"></button>
+        <div class="verticalLine"></div><div class="horizontalLine"></div>
         <button class="rectangle" id="l0r5" onclick="clicked(this)"></button>
+        <div class="verticalLine" style="border-right-width:0px"></div>
         <button class="rectangle" id="l0r6" onclick="clicked(this)"></button>
+        <div class="verticalLine"></div><div class="horizontalLine"></div>
         <button class="rectangle" id="l0r7" onclick="clicked(this)"></button>
-      </div>
-      <!-- Layer 2 -->
-      <div class="layer">
+      </div><div class="layer">
         <div class="spacer" style="height:45px"></div>
         <button class="rectangle" id="l1r0" onclick="clicked(this)"></button>
-        <div class="spacer"></div>
+        <div class="verticalLine" style="height:150px"></div><div class="horizontalLine" style="height:75px"></div>
         <button class="rectangle" id="l1r1" onclick="clicked(this)"></button>
-        <div class="spacer"></div>
+        <div class="spacer" style="height:130px"></div>
         <button class="rectangle" id="l1r2" onclick="clicked(this)"></button>
-        <div class="spacer"></div>
+        <div class="verticalLine" style="height:150px"></div><div class="horizontalLine" style="height:75px"></div>
         <button class="rectangle" id="l1r3" onclick="clicked(this)"></button>  
-      </div>
-      <!-- Layer 3 -->
-      <div class="layer">
+      </div><div class="layer">
         <div class="spacer" style="height:45px"></div>
         <div class="spacer"></div>
         <button class="rectangle" id="l2r0" onclick="clicked(this)"></button>
-        <div class="spacer"></div>
-        <div class="spacer"></div>
-        <div class="spacer"></div>
+        <div class="verticalLine" style="height:410px"></div><div class="horizontalLine" style="height:205px"></div>
         <button class="rectangle" id="l2r1" onclick="clicked(this)"></button> 
-      </div>
-      <!-- Layer 4 -->
-      <div class="layer">
+      </div><div class="layer">
         <div class="spacer" style="height:45px"></div>
         <div class="spacer"></div>
         <div class="spacer"></div>
